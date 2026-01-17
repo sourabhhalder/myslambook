@@ -1,162 +1,225 @@
-/* --- Modern Notebook Theme --- */
-
+/* --- CSS Variables for Easy Theme Tweaks --- */
 :root {
     --forest-green: #1b4d3e;
     --mint-green: #2ecc71;
     --royal-purple: #6c5ce7;
     --paper-white: #ffffff;
     --spiral-color: #dfe6e9;
-    --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --cartoon-black: #000000;
 }
 
+/* --- Global Styles --- */
 body {
     background-color: #f0f2f5;
-    /* Fun pattern background */
+    /* Fun "grid paper" background pattern */
     background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
-    background-size: 20px 20px;
-    font-family: var(--font-main);
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
+    background-size: 25px 25px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* --- Cartoon Navbar (Middle Aligned) --- */
+.cartoon-nav {
+    background-color: var(--forest-green);
+    border: 4px solid var(--cartoon-black);
+    border-radius: 50px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 650px;
+    padding: 12px;
+    box-shadow: 0 8px 0 rgba(0,0,0,0.2);
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: block;
+    text-decoration: none;
+    background-color: var(--royal-purple);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 3px solid var(--cartoon-black);
+    font-weight: 900;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 0 var(--cartoon-black);
+}
+
+/* --- Hover: Turn Red + Zoom Out (Scale 0.95) --- */
+.nav-item:hover {
+    background-color: #ff4757; /* Bright Red */
+    transform: scale(0.95);
+    box-shadow: 0 2px 0 var(--cartoon-black);
+}
+
+.nav-item:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 var(--cartoon-black);
+}
+
+/* --- Main Notebook Container --- */
 .container {
     background: var(--paper-white);
     max-width: 800px;
-    width: 100%;
+    width: 90%;
+    margin: 40px 0;
     padding: 50px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 0px var(--forest-green), 20px 20px 40px rgba(0,0,0,0.1);
+    border-radius: 25px;
+    box-shadow: 12px 12px 0px var(--forest-green), 20px 20px 40px rgba(0,0,0,0.1);
     position: relative;
-    border: 2px solid #ddd;
+    border: 3px solid #ddd;
 }
 
-/* --- The Notebook "Holes" --- */
+/* Notebook "Spiral" Holes Effect */
 .container::before {
     content: '';
     position: absolute;
     left: 20px;
-    top: 20px;
-    bottom: 20px;
+    top: 30px;
+    bottom: 30px;
     width: 25px;
     background-image: radial-gradient(circle, var(--spiral-color) 40%, transparent 45%);
-    background-size: 100% 40px;
+    background-size: 100% 45px;
 }
 
 header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
     border-bottom: 4px dashed var(--royal-purple);
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 }
 
 header h1 {
     color: var(--forest-green);
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 2.8rem;
     margin: 0;
+    text-transform: uppercase;
 }
 
-header p {
-    color: var(--royal-purple);
-    font-weight: bold;
-    font-style: italic;
-}
-
-/* --- Form Elements --- */
+/* --- Form Design --- */
 fieldset {
-    border: 2px solid var(--forest-green);
-    border-radius: 15px;
-    margin-bottom: 30px;
+    border: 3px solid var(--forest-green);
+    border-radius: 20px;
+    margin-bottom: 35px;
     padding: 25px;
-    background: rgba(46, 204, 113, 0.05); /* Very light mint tint */
+    background: rgba(46, 204, 113, 0.03);
 }
 
 legend {
     background: var(--forest-green);
     color: white;
-    padding: 5px 20px;
+    padding: 8px 25px;
     border-radius: 50px;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    border: 2px solid var(--cartoon-black);
 }
 
 .row {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 .input-group {
     flex: 1;
-    min-width: 200px;
-    margin-bottom: 20px;
+    min-width: 220px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
 }
 
 label {
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #333;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--forest-green);
     font-size: 0.95rem;
 }
 
 input, textarea {
-    border: 2px solid #eee;
-    border-radius: 10px;
-    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 14px;
     font-size: 1rem;
     background: #fdfdfd;
     transition: all 0.3s ease;
 }
 
-/* Focus Effect */
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--royal-purple);
-    box-shadow: 0 0 10px rgba(108, 92, 231, 0.2);
-    transform: translateY(-2px);
+    background: #fff;
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.15);
 }
 
-/* Handwritten Signature Style */
+/* Autograph Field (Yellow Sticky Note Look) */
 .handwriting {
     font-family: 'Brush Script MT', cursive;
-    font-size: 1.5rem !important;
+    font-size: 1.6rem !important;
     color: var(--royal-purple);
-    background: #fff9db !important; /* Yellow sticky note look */
+    background: #fff9db !important;
+    border: 2px dashed #f1c40f !important;
 }
 
-/* --- Buttons --- */
+/* --- Submit Button (Bouncy Cartoon Style) --- */
 .submit-btn {
     width: 100%;
     padding: 20px;
     background-color: var(--mint-green);
     color: white;
-    border: none;
-    border-radius: 15px;
-    font-size: 1.2rem;
-    font-weight: 800;
+    border: 3px solid var(--cartoon-black);
+    border-radius: 20px;
+    font-size: 1.4rem;
+    font-weight: 900;
     cursor: pointer;
-    box-shadow: 0 6px 0 var(--forest-green);
+    box-shadow: 0 8px 0 var(--forest-green);
     transition: all 0.2s ease;
-    text-transform: uppercase;
+    margin-top: 20px;
 }
 
 .submit-btn:hover {
-    background-color: #e74c3c; /* Turns Red on Hover as per your earlier style */
-    box-shadow: 0 6px 0 #c0392b;
+    background-color: #ff4757; /* Turn Red */
+    box-shadow: 0 8px 0 #b33939;
+    transform: scale(0.97); /* Slight zoom out */
 }
 
 .submit-btn:active {
     box-shadow: 0 0 0 var(--forest-green);
-    transform: translateY(6px); /* Zoom out / Pressed effect */
+    transform: translateY(8px);
 }
 
-/* Responsive Mobile view */
+/* --- Mobile Friendliness --- */
 @media (max-width: 600px) {
-    .container { padding: 30px 15px; }
-    .container::before { display: none; }
+    .container { 
+        padding: 35px 20px; 
+    }
+    .container::before { 
+        display: none; 
+    }
+    .nav-menu {
+        gap: 8px;
+    }
+    .nav-item {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
 }

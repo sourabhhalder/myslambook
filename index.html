@@ -3,43 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Groovy Slambook v2</title>
+    <title>My Groovy Slambook v2 | Cartoon Edition</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+    <nav class="cartoon-nav">
+        <div class="nav-wrapper">
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-item">🏠 Home</a></li>
+                <li><a href="#" class="nav-item">✨ More Info</a></li>
+                <li><a href="#" class="nav-item">📞 Contact</a></li>
+                <li><a href="#" class="nav-item">❓ Help</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
         <header>
-            <h1>✨ My Digital Slambook ✨</h1>
-            <p>Leave a memory that lasts forever!</p>
+            <h1>🚀 My Digital Slambook</h1>
+            <p>Fill it out, keep it cool!</p>
         </header>
 
         <form id="slambookForm">
             
             <fieldset>
-                <legend>The Basics</legend>
+                <legend>🌈 The Basics</legend>
                 <div class="row">
                     <div class="input-group">
                         <label>My Cool Name:</label>
-                        <input type="text" name="cool_name" required>
+                        <input type="text" name="cool_name" placeholder="E.g. Captain Awesome" required>
                     </div>
                     <div class="input-group">
                         <label>My Groovy Nickname:</label>
-                        <input type="text" name="nickname">
+                        <input type="text" name="nickname" placeholder="What they call me...">
                     </div>
                 </div>
                 <div class="input-group">
                     <label>My Home Run (Address):</label>
-                    <input type="text" name="home_run">
+                    <input type="text" name="home_run" placeholder="Planet Earth...">
                 </div>
                 <div class="row">
                     <div class="input-group">
                         <label>Call Me At:</label>
-                        <input type="tel" name="phone">
+                        <input type="tel" name="phone" placeholder="Digits please!">
                     </div>
                     <div class="input-group">
                         <label>Send Me Email At:</label>
-                        <input type="email" name="email">
+                        <input type="email" name="email" placeholder="mail@example.com">
                     </div>
                 </div>
                 <div class="row">
@@ -49,17 +60,17 @@
                     </div>
                     <div class="input-group">
                         <label>My Zodiac Sign Is:</label>
-                        <input type="text" name="zodiac">
+                        <input type="text" name="zodiac" placeholder="Leo, Scorpio...">
                     </div>
                 </div>
                 <div class="input-group">
                     <label>My Ambition:</label>
-                    <input type="text" name="ambition">
+                    <input type="text" name="ambition" placeholder="I want to be a...">
                 </div>
             </fieldset>
 
             <fieldset>
-                <legend>My Favorites</legend>
+                <legend>🍿 My Favorites</legend>
                 <div class="row">
                     <div class="input-group">
                         <label>My Favorite Filmstar:</label>
@@ -82,15 +93,15 @@
                 </div>
                 <div class="input-group">
                     <label>My Best Friends:</label>
-                    <textarea name="best_friends" rows="2"></textarea>
+                    <textarea name="best_friends" rows="2" placeholder="List your squad!"></textarea>
                 </div>
             </fieldset>
 
             <fieldset>
-                <legend>Inside My Head</legend>
+                <legend>🧠 Inside My Head</legend>
                 <div class="input-group">
                     <label>Some words or phrases I use most:</label>
-                    <input type="text" name="phrases">
+                    <input type="text" name="phrases" placeholder="E.g. No Cap, Awesome!">
                 </div>
                 <div class="row">
                     <div class="input-group">
@@ -112,7 +123,7 @@
                 </div>
                 <div class="input-group">
                     <label>If I have a time machine - I would go to:</label>
-                    <input type="text" name="time_machine">
+                    <input type="text" name="time_machine" placeholder="Dinosaurs or Future?">
                 </div>
                 <div class="input-group">
                     <label>In my next life I want to be:</label>
@@ -124,14 +135,14 @@
                 </div>
                 <div class="input-group">
                     <label>My opinion about you:</label>
-                    <textarea name="opinion"></textarea>
+                    <textarea name="opinion" placeholder="Be honest!"></textarea>
                 </div>
             </fieldset>
 
             <div class="sign-off">
                 <div class="input-group">
                     <label>Autograph:</label>
-                    <input type="text" class="handwriting" placeholder="Sign here...">
+                    <input type="text" class="handwriting" placeholder="Your signature...">
                 </div>
                 <div class="row">
                     <div class="input-group">
@@ -140,12 +151,12 @@
                     </div>
                     <div class="input-group">
                         <label>Place:</label>
-                        <input type="text" name="place">
+                        <input type="text" name="place" placeholder="Current location">
                     </div>
                 </div>
             </div>
 
-            <button type="submit" class="submit-btn">Save to Slambook</button>
+            <button type="submit" class="submit-btn">💾 Save My Memory</button>
         </form>
     </div>
 
