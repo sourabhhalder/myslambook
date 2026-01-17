@@ -3,66 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Groovy Slambook</title>
+    <title>My Groovy Slambook v2</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <nav class="forest-navbar">
-        <div class="nav-container">
-            <a href="indexx.html" class="nav-logo">🌲 SlamLife</a>
-            <ul class="nav-menu">
-                <li><a href="indexx.html">Home</a></li>
-                <li><a href="about.html">More Info</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="slambook-page">
-        <header class="main-header">
-            <h1>✨ My Groovy Slambook ✨</h1>
-            <p>Fill this out and leave your mark!</p>
+    <div class="container">
+        <header>
+            <h1>✨ My Digital Slambook ✨</h1>
+            <p>Leave a memory that lasts forever!</p>
         </header>
 
-        <form id="slamForm">
+        <form id="slambookForm">
+            
             <fieldset>
                 <legend>The Basics</legend>
-                <div class="grid-container">
-                    <div class="field"><label>My Cool Name:</label><input type="text" name="cool_name" required></div>
-                    <div class="field"><label>My Groovy Nickname:</label><input type="text" name="nickname"></div>
-                    <div class="field"><label>My Home Run:</label><input type="text" name="home_run"></div>
-                    <div class="field"><label>Call Me At:</label><input type="tel" name="phone"></div>
-                    <div class="field"><label>Send Me Email At:</label><input type="email" name="email"></div>
-                    <div class="field"><label>My Birthday On:</label><input type="date" name="birthday"></div>
-                    <div class="field"><label>My Zodiac Sign is:</label><input type="text" name="zodiac"></div>
-                    <div class="field"><label>My Ambition:</label><input type="text" name="ambition"></div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>My Cool Name:</label>
+                        <input type="text" name="cool_name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>My Groovy Nickname:</label>
+                        <input type="text" name="nickname">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>My Home Run (Address):</label>
+                    <input type="text" name="home_run">
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>Call Me At:</label>
+                        <input type="tel" name="phone">
+                    </div>
+                    <div class="input-group">
+                        <label>Send Me Email At:</label>
+                        <input type="email" name="email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>My Birthday On:</label>
+                        <input type="date" name="birthday">
+                    </div>
+                    <div class="input-group">
+                        <label>My Zodiac Sign Is:</label>
+                        <input type="text" name="zodiac">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>My Ambition:</label>
+                    <input type="text" name="ambition">
                 </div>
             </fieldset>
-            <button type="submit" class="save-btn btn-hover-effect">Save My Memory</button>
+
+            <fieldset>
+                <legend>My Favorites</legend>
+                <div class="row">
+                    <div class="input-group">
+                        <label>My Favorite Filmstar:</label>
+                        <input type="text" name="filmstar">
+                    </div>
+                    <div class="input-group">
+                        <label>My Favorite Movie:</label>
+                        <input type="text" name="movie">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>My Favorite Animal:</label>
+                        <input type="text" name="animal">
+                    </div>
+                    <div class="input-group">
+                        <label>My Hobbies:</label>
+                        <input type="text" name="hobbies">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>My Best Friends:</label>
+                    <textarea name="best_friends" rows="2"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Inside My Head</legend>
+                <div class="input-group">
+                    <label>Some words or phrases I use most:</label>
+                    <input type="text" name="phrases">
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>Best things about me:</label>
+                        <textarea name="best_about"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label>Worst things about me:</label>
+                        <textarea name="worst_about"></textarea>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Exciting moment of my life:</label>
+                    <textarea name="exciting_moment"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>If Genie gives me a wish:</label>
+                    <input type="text" name="genie_wish">
+                </div>
+                <div class="input-group">
+                    <label>If I have a time machine - I would go to:</label>
+                    <input type="text" name="time_machine">
+                </div>
+                <div class="input-group">
+                    <label>In my next life I want to be:</label>
+                    <input type="text" name="next_life">
+                </div>
+                <div class="input-group">
+                    <label>If I win 10 Lakhs - I will:</label>
+                    <input type="text" name="win_money">
+                </div>
+                <div class="input-group">
+                    <label>My opinion about you:</label>
+                    <textarea name="opinion"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="sign-off">
+                <div class="input-group">
+                    <label>Autograph:</label>
+                    <input type="text" class="handwriting" placeholder="Sign here...">
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>Date:</label>
+                        <input type="date" name="sign_date">
+                    </div>
+                    <div class="input-group">
+                        <label>Place:</label>
+                        <input type="text" name="place">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Save to Slambook</button>
         </form>
     </div>
-
-    <footer class="purple-footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h4>Explore</h4>
-                <ul class="footer-links">
-                    <li><a href="indexx.html">Home</a></li>
-                    <li><a href="about.html">More Info</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Newsletter</h4>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Email Address" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom"><p>&copy; 2026 My Groovy Slambook</p></div>
-    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
