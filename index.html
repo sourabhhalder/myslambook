@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Groovy Slambook v2 | Cartoon Edition</title>
+    <title>My Slam Book | Tiger Girls</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -19,12 +19,16 @@
         </div>
     </nav>
 
-    <div class="container">
-        <header>
-            <h1>🚀 My Digital Slambook</h1>
-            <p>Fill it out, keep it cool!</p>
-        </header>
+    <header class="header-section">
+        <div class="main-header-box">
+            <h1>My Slam Book</h1>
+        </div>
+        <div class="sub-header-pill">
+            🐾 Tiger Girls
+        </div>
+    </header>
 
+    <div class="container">
         <form id="slambookForm">
             
             <fieldset>
@@ -32,18 +36,12 @@
                 <div class="row">
                     <div class="input-group">
                         <label>My Cool Name:</label>
-                        <input type="text" name="cool_name" placeholder="E.g. Captain Awesome" required>
+                        <input type="text" name="cool_name" placeholder="Captain Awesome" required>
                     </div>
                     <div class="input-group">
                         <label>My Groovy Nickname:</label>
-                        <input type="text" name="nickname" placeholder="What they call me...">
+                        <input type="text" name="nickname" placeholder="Nickname...">
                     </div>
-                </div>
-                <div class="input-group">
-                    <label>My Home Run (Address):</label>
-                    <input type="text" name="home_run" placeholder="Planet Earth...">
-                </div>
-                <div class="row">
                     <div class="input-group">
                         <label>Call Me At:</label>
                         <input type="tel" name="phone" placeholder="Digits please!">
@@ -52,8 +50,6 @@
                         <label>Send Me Email At:</label>
                         <input type="email" name="email" placeholder="mail@example.com">
                     </div>
-                </div>
-                <div class="row">
                     <div class="input-group">
                         <label>My Birthday On:</label>
                         <input type="date" name="birthday">
@@ -63,87 +59,102 @@
                         <input type="text" name="zodiac" placeholder="Leo, Scorpio...">
                     </div>
                 </div>
-                <div class="input-group">
-                    <label>My Ambition:</label>
-                    <input type="text" name="ambition" placeholder="I want to be a...">
+                <div class="input-group" style="margin-top: 20px;">
+                    <label>My Home Run (Address):</label>
+                    <input type="text" name="home_run" placeholder="Planet Earth...">
                 </div>
             </fieldset>
 
             <fieldset>
-                <legend>🍿 My Favorites</legend>
+                <legend>🍿 My Favorites & School</legend>
                 <div class="row">
                     <div class="input-group">
-                        <label>My Favorite Filmstar:</label>
+                        <label>🍔 Favorite Food:</label>
+                        <input type="text" name="fav_food">
+                    </div>
+                    <div class="input-group">
+                        <label>⚽ Favorite Sports:</label>
+                        <input type="text" name="fav_sports">
+                    </div>
+                    <div class="input-group">
+                        <label>🎬 Favorite Filmstar:</label>
                         <input type="text" name="filmstar">
                     </div>
                     <div class="input-group">
-                        <label>My Favorite Movie:</label>
+                        <label>🎥 Favorite Movie:</label>
                         <input type="text" name="movie">
                     </div>
-                </div>
-                <div class="row">
                     <div class="input-group">
-                        <label>My Favorite Animal:</label>
+                        <label>🏫 Best Thing about School:</label>
+                        <textarea name="best_school" rows="2"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label>😫 Worst Thing about School:</label>
+                        <textarea name="worst_school" rows="2"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label>🐾 Favorite Animal:</label>
                         <input type="text" name="animal">
                     </div>
                     <div class="input-group">
-                        <label>My Hobbies:</label>
+                        <label>🎨 My Hobbies:</label>
                         <input type="text" name="hobbies">
                     </div>
                 </div>
-                <div class="input-group">
-                    <label>My Best Friends:</label>
-                    <textarea name="best_friends" rows="2" placeholder="List your squad!"></textarea>
+                <div class="input-group" style="margin-top: 20px;">
+                    <label>👭 My Best Friends:</label>
+                    <textarea name="best_friends" rows="2"></textarea>
                 </div>
             </fieldset>
 
             <fieldset>
                 <legend>🧠 Inside My Head</legend>
-                <div class="input-group">
-                    <label>Some words or phrases I use most:</label>
-                    <input type="text" name="phrases" placeholder="E.g. No Cap, Awesome!">
-                </div>
                 <div class="row">
                     <div class="input-group">
+                        <label>Ambition:</label>
+                        <input type="text" name="ambition">
+                    </div>
+                    <div class="input-group">
+                        <label>Phrases I use most:</label>
+                        <input type="text" name="phrases">
+                    </div>
+                    <div class="input-group">
                         <label>Best things about me:</label>
-                        <textarea name="best_about"></textarea>
+                        <textarea name="best_about" rows="2"></textarea>
                     </div>
                     <div class="input-group">
                         <label>Worst things about me:</label>
-                        <textarea name="worst_about"></textarea>
+                        <textarea name="worst_about" rows="2"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label>Exciting moment:</label>
+                        <textarea name="exciting_moment" rows="2"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label>If Genie gave me a wish:</label>
+                        <input type="text" name="genie_wish">
+                    </div>
+                    <div class="input-group">
+                        <label>Next life I want to be:</label>
+                        <input type="text" name="next_life">
+                    </div>
+                    <div class="input-group">
+                        <label>If I win 10 Lakhs:</label>
+                        <input type="text" name="win_money">
                     </div>
                 </div>
-                <div class="input-group">
-                    <label>Exciting moment of my life:</label>
-                    <textarea name="exciting_moment"></textarea>
-                </div>
-                <div class="input-group">
-                    <label>If Genie gives me a wish:</label>
-                    <input type="text" name="genie_wish">
-                </div>
-                <div class="input-group">
+                <div class="input-group" style="margin-top:20px;">
                     <label>If I have a time machine - I would go to:</label>
-                    <input type="text" name="time_machine" placeholder="Dinosaurs or Future?">
+                    <input type="text" name="time_machine">
                 </div>
-                <div class="input-group">
-                    <label>In my next life I want to be:</label>
-                    <input type="text" name="next_life">
-                </div>
-                <div class="input-group">
-                    <label>If I win 10 Lakhs - I will:</label>
-                    <input type="text" name="win_money">
-                </div>
-                <div class="input-group">
+                <div class="input-group" style="margin-top:20px;">
                     <label>My opinion about you:</label>
-                    <textarea name="opinion" placeholder="Be honest!"></textarea>
+                    <textarea name="opinion" rows="3"></textarea>
                 </div>
             </fieldset>
 
-            <div class="sign-off">
-                <div class="input-group">
-                    <label>Autograph:</label>
-                    <input type="text" class="handwriting" placeholder="Your signature...">
-                </div>
+            <fieldset>
+                <legend>✍️ Signature</legend>
                 <div class="row">
                     <div class="input-group">
                         <label>Date:</label>
@@ -151,15 +162,30 @@
                     </div>
                     <div class="input-group">
                         <label>Place:</label>
-                        <input type="text" name="place" placeholder="Current location">
+                        <input type="text" name="place">
                     </div>
                 </div>
-            </div>
+                <div class="input-group" style="margin-top: 20px;">
+                    <label>Autograph:</label>
+                    <input type="text" class="handwriting" placeholder="Sign here...">
+                </div>
+            </fieldset>
 
-            <button type="submit" class="submit-btn">💾 Save My Memory</button>
+            <button type="submit" class="submit-btn">💾 SAVE MY MEMORY</button>
         </form>
     </div>
 
     <script src="assets/js/script.js"></script>
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="rocket-btn">
+    🚀
+</button>
+<div id="successPopup" class="popup-overlay">
+    <div class="success-card">
+        <div id="confetti-box"></div>
+        <h2>YAY! 🎉</h2>
+        <p style="font-size: 1.5rem; font-weight: 800;">Memory Saved Successfully!</p>
+        <button class="close-popup" onclick="closePopup()">AWESOME!</button>
+    </div>
+</div>
 </body>
 </html>
