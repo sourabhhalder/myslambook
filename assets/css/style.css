@@ -265,3 +265,11 @@ input:focus {
     font-weight: 900;
     cursor: pointer;
 }
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+.confetti {
+    pointer-events: none;
+}

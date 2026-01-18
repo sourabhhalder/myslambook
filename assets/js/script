@@ -1,55 +1,32 @@
-document.getElementById('slambookForm').addEventListener('submit', function(e) {
-    // 1. STOP the page from refreshing
-    e.preventDefault(); 
+// This alert will prove the file is finally connected!
+alert("Connection Successful: JavaScript is now running!");
 
-    // 2. Trigger the Success UI
-    showPopup();
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('slambookForm');
 
-    // 3. Optional: Log the data to console (to see it's working)
-    const formData = new FormData(this);
-    console.log("Memory Captured!", Object.fromEntries(formData));
+    form.addEventListener('submit', function(e) {
+        // This stops the URL from getting long and the page from refreshing
+        e.preventDefault(); 
+        
+        console.log("Sending data to Node.js...");
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+
+        fetch('http://localhost:3000/save-entry', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        })
+        .then(response => {
+            if (response.ok) {
+                showPopup(); // Your confetti function
+            } else {
+                alert("Server error. Is the Excel file open? Please close it!");
+            }
+        })
+        .catch(err => {
+            alert("Node.js Server is not responding! Make sure the terminal window is open.");
+        });
+    });
 });
-
-function showPopup() {
-    const popup = document.getElementById('successPopup');
-    popup.style.display = 'flex';
-
-    // 4. Create the Confetti Explosion
-    for (let i = 0; i < 60; i++) {
-        createConfetti();
-    }
-}
-
-function createConfetti() {
-    const confetti = document.createElement('div');
-    confetti.classList.add('confetti');
-    
-    // Randomize styling for that "Doodle Art" look
-    const colors = ['#ff4791', '#00d2ff', '#7d5fff', '#3ae374', '#fff982'];
-    const shapes = ['50%', '0%']; // Circles and Squares
-    
-    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    confetti.style.borderRadius = shapes[Math.floor(Math.random() * shapes.length)];
-    confetti.style.left = Math.random() * 100 + 'vw';
-    confetti.style.width = Math.random() * 10 + 10 + 'px';
-    confetti.style.height = confetti.style.width;
-    
-    // Vary the speed so it looks natural
-    confetti.style.animationDuration = Math.random() * 2 + 3 + 's';
-    confetti.style.opacity = Math.random();
-
-    document.body.appendChild(confetti);
-
-    // Clean up memory: Remove confetti after animation ends
-    setTimeout(() => {
-        confetti.remove();
-    }, 4000);
-}
-
-function closePopup() {
-    const popup = document.getElementById('successPopup');
-    popup.style.display = 'none';
-    
-    // 5. Clear the form ONLY after the user closes the popup
-    document.getElementById('slambookForm').reset();
-}

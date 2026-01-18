@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Slam Book | Tiger Girls</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
 </head>
 <body>
 
@@ -166,8 +170,8 @@
                     </div>
                 </div>
                 <div class="input-group" style="margin-top: 20px;">
-                    <label>Autograph:</label>
-                    <input type="text" class="handwriting" placeholder="Sign here...">
+                    <label>Autograph (Name):</label>
+                    <input type="text" name="autograph" class="handwriting" placeholder="Sign here...">
                 </div>
             </fieldset>
 
@@ -175,17 +179,20 @@
         </form>
     </div>
 
-    <script src="assets/js/script.js"></script>
-<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="rocket-btn">
-    🚀
-</button>
-<div id="successPopup" class="popup-overlay">
-    <div class="success-card">
-        <div id="confetti-box"></div>
-        <h2>YAY! 🎉</h2>
-        <p style="font-size: 1.5rem; font-weight: 800;">Memory Saved Successfully!</p>
-        <button class="close-popup" onclick="closePopup()">AWESOME!</button>
+    <div id="successPopup" class="popup-overlay" style="display: none;">
+        <div class="success-card">
+            <h2>YAY! 🎉</h2>
+            <p style="font-size: 1.2rem; font-weight: 800; color: #333; margin: 15px 0;">
+                Memory Saved to Excel successfully!
+            </p>
+            <button type="button" class="close-popup" onclick="closePopup()">AWESOME!</button>
+        </div>
     </div>
-</div>
+
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="rocket-btn">
+        🚀
+    </button>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
