@@ -1,0 +1,26 @@
+{
+  "name": "myslambook-v2",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000m\u0000y\u0000s\u0000l\u0000a\u0000m\u0000b\u0000o\u0000o\u0000k\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sourabhhalder/myslambook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sourabhhalder/myslambook/issues"
+  },
+  "homepage": "https://github.com/sourabhhalder/myslambook#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1"
+  }
+}
